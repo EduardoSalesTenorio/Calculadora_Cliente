@@ -7,6 +7,46 @@ public class Tela_Inicial extends javax.swing.JFrame {
     public Tela_Inicial() {
         initComponents();
     }
+    float num1, num2, total;
+    String operacao;
+    String panel = "";
+    String a = "";
+    boolean cont = true;
+
+    public void converter() {
+
+        if (cont) {
+            num1 = Float.parseFloat(a);
+            cont = false;
+        } else {
+            num2 = Float.parseFloat(a);
+            cont = true;
+        }
+
+    }
+
+    public void pegar() {
+        switch (operacao) {
+            case "+":
+                total = num1 + num2;
+
+
+                break;
+            case "-":
+                total = num1 - num2;
+
+                break;
+            case "*":
+                total = num1 * num2;
+
+                break;
+            case "/":
+                total = num1 / num2;
+
+                break;
+        }
+
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -269,44 +309,92 @@ public class Tela_Inicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BT_UmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_UmActionPerformed
+
+        panel += "1";
+        a += "1";
+        Visor_Numeros.setText(panel);
     }//GEN-LAST:event_BT_UmActionPerformed
 
     private void BT_SomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SomaActionPerformed
+
+        converter();
+        a = "";
+
+        operacao = "+";
+        panel += "+";
+        Visor_Numeros.setText(panel);
+
+        pegar();
+
     }//GEN-LAST:event_BT_SomaActionPerformed
 
     private void BT_DoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_DoisActionPerformed
+        panel += "2";
+        a += "2";
+        Visor_Numeros.setText(panel);
     }//GEN-LAST:event_BT_DoisActionPerformed
 
     private void BT_TresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_TresActionPerformed
+        panel += "3";
+        a += "3";
+        Visor_Numeros.setText(panel);
     }//GEN-LAST:event_BT_TresActionPerformed
 
     private void BT_QuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_QuatroActionPerformed
+        panel += "4";
+        a += "4";
+        Visor_Numeros.setText(panel);
     }//GEN-LAST:event_BT_QuatroActionPerformed
 
     private void BT_CincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_CincoActionPerformed
-    }//GEN-LAST:event_BT_CincoActionPerformed
+        panel += "5";
+        a += "5";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_CincoActionPerformed
 
     private void BT_SeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SeisActionPerformed
-    }//GEN-LAST:event_BT_SeisActionPerformed
+        panel += "6";
+        a += "6";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_SeisActionPerformed
 
     private void BT_SeteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SeteActionPerformed
-    }//GEN-LAST:event_BT_SeteActionPerformed
+        panel += "7";
+        a += "7";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_SeteActionPerformed
 
     private void BT_OitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_OitoActionPerformed
-    }//GEN-LAST:event_BT_OitoActionPerformed
+        panel += "8";
+        a += "8";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_OitoActionPerformed
 
     private void BT_NoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_NoveActionPerformed
-    }//GEN-LAST:event_BT_NoveActionPerformed
+        panel += "9";
+        a += "9";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_NoveActionPerformed
 
     private void BT_ZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ZeroActionPerformed
-    }//GEN-LAST:event_BT_ZeroActionPerformed
+        panel += "0";
+        a += "0";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_ZeroActionPerformed
 
     private void BT_PontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_PontoActionPerformed
-    }//GEN-LAST:event_BT_PontoActionPerformed
+        panel += ".";
+        a += ".";
+        Visor_Numeros.setText(panel);    }//GEN-LAST:event_BT_PontoActionPerformed
     private void BT_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SubtracaoActionPerformed
+        converter();
+        a = "";
+
+        operacao = "-";
+        panel += "-";
+        Visor_Numeros.setText(panel);
+
+        pegar();
     }//GEN-LAST:event_BT_SubtracaoActionPerformed
 
     private void BT_IgualdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_IgualdadeActionPerformed
+
+        pegar();
+        Visor_Resultado.setText("" + total);
     }//GEN-LAST:event_BT_IgualdadeActionPerformed
 
     public static void main(String args[]) {
