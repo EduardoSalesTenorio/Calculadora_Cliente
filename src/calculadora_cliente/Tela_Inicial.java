@@ -384,6 +384,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         converter();
         a = "";
 
+        //ekjf
         operacao = "-";
         panel += "-";
         Visor_Numeros.setText(panel);
