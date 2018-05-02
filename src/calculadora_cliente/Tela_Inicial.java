@@ -8,71 +8,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
         initComponents();
     }
 
-    String numero = "";
-    String auxiliar = "";
-    String mostrar = "";
-
-    float numero_Convertido;
-    float total;
-    
-    int operacao = 0;
-
-    boolean negativo = true;
-    boolean ponto = true;
-
-    public void mostrarConta() {
-        mostrar += numero;
-        Visor_Numeros.setText(mostrar);
-    }
-
-    public void mostrarResultado() {
-
-    }
-
-    public void convercao() {
-
-    }
-
-    public void soma() {
-
-        numero_Convertido = Float.parseFloat(auxiliar);
-        total += numero_Convertido;
-
-        auxiliar = "";
-        numero = "";
-        ponto = true;
-        numero_Convertido = 0;
-        Visor_Resultado.setText("" + total);
-
-        mostrar += "+";
-        mostrarConta();
-    }
-
-    public void subtracao() {
-
-        numero_Convertido = Float.parseFloat(auxiliar);
-        if (negativo) {
-            total = numero_Convertido;
-            negativo = false;
-        } else {
-            total -= numero_Convertido;
-        }
-        auxiliar = "";
-        numero = "";
-        ponto = true;
-        numero_Convertido = 0;
-        Visor_Resultado.setText("" + total);
-
-        mostrar += "-";
-        mostrarConta();
-
-    }
-    public void ope(){
-        if(operacao == 1){
-            soma();
-        }
-    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -334,85 +269,44 @@ public class Tela_Inicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BT_UmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_UmActionPerformed
-        numero = "1";
-        auxiliar += "1";
-        mostrarConta();
     }//GEN-LAST:event_BT_UmActionPerformed
 
     private void BT_SomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SomaActionPerformed
-        ope();
-        operacao = 1;
     }//GEN-LAST:event_BT_SomaActionPerformed
 
     private void BT_DoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_DoisActionPerformed
-        numero = "2";
-        auxiliar += "2";
-        mostrarConta();
     }//GEN-LAST:event_BT_DoisActionPerformed
 
     private void BT_TresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_TresActionPerformed
-        numero = "3";
-        auxiliar += "3";
-        mostrarConta();
     }//GEN-LAST:event_BT_TresActionPerformed
 
     private void BT_QuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_QuatroActionPerformed
-        numero = "4";
-        auxiliar += "4";
-        mostrarConta();
     }//GEN-LAST:event_BT_QuatroActionPerformed
 
     private void BT_CincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_CincoActionPerformed
-        numero = "5";
-        auxiliar += "5";
-        mostrarConta();
     }//GEN-LAST:event_BT_CincoActionPerformed
 
     private void BT_SeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SeisActionPerformed
-        numero = "6";
-        auxiliar += "6";
-        mostrarConta();
     }//GEN-LAST:event_BT_SeisActionPerformed
 
     private void BT_SeteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SeteActionPerformed
-        numero = "7";
-        auxiliar += "7";
-        mostrarConta();
     }//GEN-LAST:event_BT_SeteActionPerformed
 
     private void BT_OitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_OitoActionPerformed
-        numero = "8";
-        auxiliar += "8";
-        mostrarConta();
     }//GEN-LAST:event_BT_OitoActionPerformed
 
     private void BT_NoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_NoveActionPerformed
-        numero = "9";
-        auxiliar += "9";
-        mostrarConta();
     }//GEN-LAST:event_BT_NoveActionPerformed
 
     private void BT_ZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ZeroActionPerformed
-        numero = "0";
-        auxiliar += "0";
-        mostrarConta();
     }//GEN-LAST:event_BT_ZeroActionPerformed
 
     private void BT_PontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_PontoActionPerformed
-        if (ponto) {
-            numero = ".";
-            auxiliar += ".";
-            ponto = false;
-            mostrarConta();
-        }
     }//GEN-LAST:event_BT_PontoActionPerformed
-
     private void BT_SubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_SubtracaoActionPerformed
-        subtracao();
     }//GEN-LAST:event_BT_SubtracaoActionPerformed
 
     private void BT_IgualdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_IgualdadeActionPerformed
-      
     }//GEN-LAST:event_BT_IgualdadeActionPerformed
 
     public static void main(String args[]) {
@@ -423,7 +317,6 @@ public class Tela_Inicial extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BT_Cinco;
     private javax.swing.JButton BT_Divisao;
